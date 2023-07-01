@@ -1,0 +1,36 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+
+
+
+
+    <changeSet id="fill-lots-table.xml" author="Igor">
+        <preConditions>
+            <tableExists tableName="lots"/>
+        </preConditions>
+
+        <insert tableName="lots">
+            <column name="status">CREATED</column>
+            <column name="title">Car</column>
+            <column name="description">Rare car</column>
+            <column name="start_price">500</column>
+            <column name="bid_price">100</column>
+        </insert>
+
+        <insert tableName="lots">
+            <column name="status">CREATED</column>
+            <column name="title">Picture</column>
+            <column name="description">Good picture</column>
+            <column name="start_price">200</column>
+            <column name="bid_price">20</column>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
+
+

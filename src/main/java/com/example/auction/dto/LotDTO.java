@@ -1,6 +1,11 @@
 package com.example.auction.dto;
 
-public class Lot {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class LotDTO {
     private int id;
     private Status status;
     private String title;
