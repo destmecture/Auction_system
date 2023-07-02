@@ -76,13 +76,21 @@ public class LotService {
     }
 
     public List<LotDTO> findLots(@Nullable Status status, int page) {
-       Pageable pageable = PageRequest.of(page, 10);
-        return Optional.ofNullable(status)
-                .map(x->lotRepository.findAllByStatus(x, pageable))
-                .orElseGet(()->lotRepository.findAll(pageable))
-                .stream()
-                .map(lotMapper::toLotDTO)
-                .collect(Collectors.toList());
+        PageRequest pageRequest;
+        Page<Lot> lotPage;
+
+        if(!(status ==null)){
+            pageRequest = PageRequest.of(page, 10);
+            lotPage = lotRepository.findAllByStatus(status, pageRequest);
+            return lotPage.stream().map(lotMapper::toLotDTO).toList();
+        }else{
+            pageRequest = PageRequest.of(page, 10);
+            lotPage = lotRepository.findAll(pageRequest);
+            return lotPage.stream().map(lotMapper::toLotDTO).toList();
+        }
+
+
+
     }
 
     public byte[] getCSVFile() {
