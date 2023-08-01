@@ -1,0 +1,76 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+
+
+
+    <changeSet id="fill-bids-table.xml" author="Igor">
+
+        <preConditions>
+            <tableExists tableName="bids"/>
+        </preConditions>
+
+        <insert tableName="bids">
+            <column name="name">Alex</column>
+            <column name="date_time">2019-08-31T23:49:05.629+08:00</column>
+            <column name="lot_id">1</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Ivan</column>
+            <column name="date_time">2019-09-01T23:49:05.629+08:00</column>
+            <column name="lot_id">1</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Alex</column>
+            <column name="date_time">2019-09-02T23:49:05.629+08:00</column>
+            <column name="lot_id">1</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Ivan</column>
+            <column name="date_time">2019-09-03T23:49:05.629+08:00</column>
+            <column name="lot_id">1</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Sergey</column>
+            <column name="date_time">2019-09-04T23:49:05.629+08:00</column>
+            <column name="lot_id">1</column>
+        </insert>
+
+
+
+        <insert tableName="bids">
+            <column name="name">Alex</column>
+            <column name="date_time">2019-08-31T23:49:05.629+08:00</column>
+            <column name="lot_id">2</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Ivan</column>
+            <column name="date_time">2019-09-01T23:49:05.629+08:00</column>
+            <column name="lot_id">2</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Alex</column>
+            <column name="date_time">2019-09-02T23:49:05.629+08:00</column>
+            <column name="lot_id">2</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Ivan</column>
+            <column name="date_time">2019-09-03T23:49:05.629+08:00</column>
+            <column name="lot_id">2</column>
+        </insert>
+        <insert tableName="bids">
+            <column name="name">Sergey</column>
+            <column name="date_time">2019-09-04T23:49:05.629+08:00</column>
+            <column name="lot_id">2</column>
+        </insert>
+
+
+
+
+
+    </changeSet>
+</databaseChangeLog>

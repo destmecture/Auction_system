@@ -1,6 +1,15 @@
 package com.example.auction.dto;
 
-public class FullLot {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+public class FullLotDTO {
     private int id;
     private Status status;
     private String title;
@@ -8,5 +17,6 @@ public class FullLot {
     private int startPrice;
     private int bidPrice;
     private int currentPrice;
+    private BidDTO lastBid;
 
 }
