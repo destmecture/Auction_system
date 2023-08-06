@@ -1,4 +1,4 @@
-## *Employee-accounting-application*
+## *Auction system*
 An online auction application that allows you to create new lots, bet on them, stop bidding on lots. All lot data is stored in the database. Lots can be in three states:
 + CREATED
 + STARTED
